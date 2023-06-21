@@ -23,7 +23,7 @@
     />
     <link rel="stylesheet" href="./estilos.css" />
   </head>
-  <body>
+  <body data-bs-theme="light">
     <!-- Navbar -->
     <header>
       <nav class="navbar-expand-lg navbar bg-body-tertiary fixed-top">
@@ -72,21 +72,21 @@
                   <a class="nav-link" href="#">Sobre</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contato</a>
+                  <a class="nav-link" href="#contato">Contato</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#"
                     ><div class="form-check form-switch">
                       <label
                         class="form-check-label"
-                        for="flexSwitchCheckDefault"
+                        for="modo-noturno"
                         >Modo Noturno</label
                       >
                       <input
                         class="form-check-input"
                         type="checkbox"
                         role="switch"
-                        id="flexSwitchCheckDefault"
+                        id="modo-noturno"
                       /></div
                   ></a>
                 </li>
@@ -301,7 +301,99 @@
 
       <!-- Banner 3 -->
       <section class="banners banner-3"></section>
+
+      <!-- Formulário -->
+      <section class="py-4 container">
+        <div class="row">
+          <div class="col-10 col-xl-8 mx-auto">
+            <div class="border border-2 rounded p-3">
+              <h3 class="fw-bold p-3">Entre em contato</h3>
+              <form id="contato">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="floatingNome"
+                    placeholder="Nome"
+                  />
+                  <label for="floatingNome">Nome</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="floatingEmail"
+                    placeholder="nome@exemplo.com"
+                  />
+                  <label for="floatingEmail">Email</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="floatingTelefone"
+                    placeholder="Telefone"
+                  />
+                  <label for="floatingTelefone">Telefone</label>
+                </div>
+
+                <select
+                  class="form-select mb-3"
+                  aria-label="Default select example"
+                >
+                  <option selected>Preferência de Contato:</option>
+                  <option value="1">Email</option>
+                  <option value="2">Whatsapp</option>
+                  <option value="3">Ligação</option>
+                </select>
+
+                <label for="nivel-satisfacao" class="form-label"
+                  >Nível de satisfação:</label
+                >
+                <input
+                  type="range"
+                  class="form-range input-range"
+                  id="nivel-satisfacao"
+                />
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Deseja receber novidades por email?
+                  </label>
+                </div>
+                <button
+                  type="button"
+                  class="btn botao-padrao w-100 fw-bold mt-3 py-3"
+                >
+                  Enviar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="text-center rodape">
+      <section class="container p-4 pb-0 mb-0 mb-sm-4">
+        <a class="btn" href="#!"><i class="bi bi-whatsapp fs-4"></i></a>
+        <a class="btn" href="#!"><i class="bi bi-instagram fs-4"></i></a>
+        <a class="btn" href="#!"><i class="bi bi-twitter fs-4"></i></a>
+      </section>
+      <div class="">
+        2023 <i class="bi bi-c-circle"></i> Desenvolvido por Alura | Projeto
+        fictício sem fins comerciais.
+      </div>
+    </footer>
 
     <!-- Canvas 1 -->
     <div
@@ -540,7 +632,7 @@
     </div>
 
     <!-- Modal 1 -->
-    <div
+    <article
       class="modal fade"
       id="modal-1"
       tabindex="-1"
@@ -549,7 +641,7 @@
     >
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
+          <header class="modal-header">
             <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">
               Cafés Tradicionais
             </h2>
@@ -559,8 +651,8 @@
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
-          </div>
-          <div class="modal-body">
+          </header>
+          <section class="modal-body">
             <img
               class="w-100"
               src="./assets/produtos-cafe-tradicional.png"
@@ -579,8 +671,8 @@
               expresso encorpado e intenso. Já o "Café Cappuccino" é uma escolha
               clássica para quem prefere uma bebida cremosa e suave.
             </p>
-          </div>
-          <div class="modal-footer mx-auto">
+          </section>
+          <footer class="modal-footer mx-auto">
             <button
               type="button"
               class="btn btn-secondary botao-padrao border-0"
@@ -588,13 +680,13 @@
             >
               Fechar
             </button>
-          </div>
+          </footer>
         </div>
       </div>
-    </div>
+    </article>
 
     <!-- Modal 2 -->
-    <div
+    <article
       class="modal fade"
       id="modal-2"
       tabindex="-1"
@@ -603,7 +695,7 @@
     >
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
+          <header class="modal-header">
             <h2 class="modal-title fs-5 fw-bold" id="exampleModalLabel">
               Cafés Especiais
             </h2>
@@ -613,8 +705,8 @@
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
-          </div>
-          <div class="modal-body">
+          </header>
+          <section class="modal-body">
             <img
               class="w-100"
               src="./assets/produtos-cafe-especial.png"
@@ -637,8 +729,8 @@
               servido com gelo e leite, resultando em uma bebida refrescante e
               saborosa.
             </p>
-          </div>
-          <div class="modal-footer mx-auto">
+          </section>
+          <footer class="modal-footer mx-auto">
             <button
               type="button"
               class="btn btn-secondary botao-padrao border-0"
@@ -646,15 +738,16 @@
             >
               Fechar
             </button>
-          </div>
+          </footer>
         </div>
       </div>
-    </div>
+    </article>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
       crossorigin="anonymous"
     ></script>
+    <script src="./script.js"></script>
   </body>
 </html>
